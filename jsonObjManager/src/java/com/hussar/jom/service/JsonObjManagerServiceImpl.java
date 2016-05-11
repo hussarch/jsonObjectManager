@@ -16,7 +16,7 @@ import com.hussar.jom.response.KeyJsonVO;
 public class JsonObjManagerServiceImpl implements JsonObjManagerService {
 
     @Override
-    public List<KeyJsonVO> getKeyJsonList(String keyFilter, String name, int startIndex, int endIndex) {
+    public List<KeyJsonVO> getKeyJsonList(String keyFilter, int startIndex, int endIndex) {
         List<KeyJsonVO> list = new ArrayList<KeyJsonVO>();
         list.add(new KeyJsonVO("app.servet", "111111111111"));
         list.add(new KeyJsonVO("app.gew", "222222"));
