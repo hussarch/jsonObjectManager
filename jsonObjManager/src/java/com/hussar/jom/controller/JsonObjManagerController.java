@@ -1,6 +1,9 @@
 package com.hussar.jom.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+
+import com.hussar.jom.service.JsonObjManagerService;
 
 /**
  * @author yi.xiao
@@ -11,7 +14,8 @@ import org.springframework.stereotype.Controller;
 @Controller("/obj/json")
 public class JsonObjManagerController {
     
-    
+    @Autowired
+    private JsonObjManagerService jsonObjManagerService;
     
     
     
