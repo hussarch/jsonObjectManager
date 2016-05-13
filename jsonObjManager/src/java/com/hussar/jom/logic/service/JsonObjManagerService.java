@@ -1,4 +1,4 @@
-package com.hussar.jom.service;
+package com.hussar.jom.logic.service;
 
 import java.util.List;
 

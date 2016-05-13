@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.hussar.jom.service.JsonObjManagerService;
+import com.hussar.jom.logic.service.JsonObjManagerService;
 
 /**
  * @author yi.xiao
@@ -25,6 +25,14 @@ public class JsonObjManagerController {
     public String getKeyValueList(@PathVariable String keyFilter, @PathVariable Integer startIndex, Integer endIndex,  Model mode){
         mode.addAttribute("keyJsonList", jsonObjManagerService.getKeyJsonList(keyFilter, startIndex, endIndex));
         return "/jom/keyJsonList";
+    }
+
+    public JsonObjManagerService getJsonObjManagerService() {
+        return jsonObjManagerService;
+    }
+
+    public void setJsonObjManagerService(JsonObjManagerService jsonObjManagerService) {
+        this.jsonObjManagerService = jsonObjManagerService;
     }
     
     
