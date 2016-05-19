@@ -23,9 +23,9 @@ public class JsonObjManagerController {
     private JsonObjManagerService jsonObjManagerService;
     
     @RequestMapping(path="/list.action", method=RequestMethod.GET)
-    public String getKeyValueList(@RequestParam String keyFilter, @RequestParam Integer startIndex, @RequestParam Integer endIndex,  Model mode){
+    public String getKeyValueList(@RequestParam(required=false) String keyFilter, @RequestParam(required=false) Integer startIndex, @RequestParam(required=false) Integer endIndex,  Model mode){
         mode.addAttribute("keyJsonList", jsonObjManagerService.getKeyJsonList(keyFilter, startIndex, endIndex));
-        return "/jom/keyJsonList";
+        return "jom/keyJsonList";
     }
 
     public JsonObjManagerService getJsonObjManagerService() {

@@ -12,6 +12,6 @@ import com.hussar.jom.response.KeyJsonVO;
  */
 public interface JsonObjManagerService {
     
-    List<KeyJsonVO> getKeyJsonList(String keyFilter, int startIndex, int endIndex);
+    List<KeyJsonVO> getKeyJsonList(String keyFilter, Integer startIndex, Integer endIndex);
 
 }
